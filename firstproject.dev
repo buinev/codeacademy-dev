@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@localhost
+        ServerName firstproject.dev
+        DocumentRoot /var/www/html/firstproject.dev/public
+
+        ErrorLog ${APACHE_LOG_DIR}/firstproject.dev-error.log
+        CustomLog ${APACHE_LOG_DIR}/firstproject.dev-access.log combined
+<Directory /var/www/html/firstproject.dev/public/>
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride All
+            Order allow,deny
+            allow from all
+        </Directory>
+</VirtualHost>
+
